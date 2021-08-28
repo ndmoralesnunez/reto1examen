@@ -35,7 +35,7 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
-        
+         
     - uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{HEROKU_SECRET_NM}}
