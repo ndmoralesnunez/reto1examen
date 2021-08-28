@@ -32,19 +32,7 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
-    
-#!/bin/sh
-pytest "$@"
-ret=$?
-if [ "$ret" = 5 ]; then
-  echo "No tests collected.  Exiting with 0 (instead of 5)."
-  exit 0
-fi
-exit "$ret"
 
-    - name: Test with pytest
-      run: |
-        pytest
         
     - uses: akhileshns/heroku-deploy@v3.12.12
       with:
